@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+.purple-filled-button {
+    background: #8338EC;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px 20px;
+    gap: 4px;
+}
+
+.purple-filled-button:hover {
+    background: #B588F4;
+}
+
+.purple-linear-button {
+    background: #FFFFFF;
+    border: 1px solid #8338EC;
+    border-radius: 5px;
+    color: #212529;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.purple-linear-button:hover {
+    border: 1px solid #B588F4
+}
