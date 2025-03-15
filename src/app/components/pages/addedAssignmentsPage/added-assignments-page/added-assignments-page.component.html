@@ -1,1 +1,74 @@
-<p>added-assignments-page works!</p>
+<h3>დავალების გვერდი</h3>
+<section id="filtering-of-assignments">
+    <div class="d-flex">
+        <div class="dropdown dropdown-department">
+            <button class="btn btn-secondary dropdown-toggle btn-filtering" type="button" id="dropdownMenuDepartment" data-bs-toggle="dropdown" aria-expanded="false">
+              დეპარტამენტი
+            </button>
+            <div class="dropdown-menu dropdown-menu-department" aria-labelledby="dropdownMenuDepartment">
+                <div class="checkbox-container d-flex justify-content-start">
+                    <div class="form-check" *ngFor="let department of departments">
+                      <input class="form-check-input" 
+                        type="checkbox" 
+                        [value]="department.id" 
+                        [id]="'checkbox-' + department.id"
+                        
+                      >
+                      <label class="form-check-label" for="flexCheckDefault" for="checkbox-{{department.id}}">
+                         {{department.name}}
+                      </label>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn purple-filled-rounded-button">არჩევა</button>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown dropdown-priority">
+            <button class="btn btn-secondary dropdown-toggle btn-filtering" type="button" id="dropdownMenuPriority" data-bs-toggle="dropdown" aria-expanded="false">
+              პრიორიტეტი
+            </button>
+            <div class="dropdown-menu dropdown-menu-priority" aria-labelledby="dropdownMenuPriority">
+                <div class="checkbox-container d-flex justify-content-start">
+                    <div class="form-check" *ngFor="let priority of priorities">
+                      <input class="form-check-input" 
+                        type="checkbox" 
+                        [value]="priority.id" 
+                        [id]="'checkbox-' + priority.id"
+                        
+                      >
+                      <label class="form-check-label" for="flexCheckDefault" for="checkbox-{{priority.id}}">
+                         {{priority.name}}
+                      </label>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn purple-filled-rounded-button">არჩევა</button>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown dropdown-employee">
+            <button class="btn btn-secondary dropdown-toggle btn-filtering" type="button" id="dropdownMenuEmployee" data-bs-toggle="dropdown" aria-expanded="false">
+              თანამშრომელი
+            </button>
+            <div class="dropdown-menu dropdown-menu-employee" aria-labelledby="dropdownMenuEmployee">
+                <div class="checkbox-container d-flex justify-content-start">
+                    <div class="form-check" *ngFor="let employee of employees">
+                      <input class="form-check-input" 
+                        type="checkbox" 
+                        [value]="employee.id" 
+                        [id]="'checkbox-' + employee.id"
+                        
+                      >
+                      <label class="form-check-label" for="flexCheckDefault" for="checkbox-{{employee.id}}">
+                        <img [src]="employee.avatar" /> {{employee.name}} {{employee.surname}}
+                      </label>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn purple-filled-rounded-button">არჩევა</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

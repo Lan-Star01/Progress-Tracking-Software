@@ -9,7 +9,7 @@
     gap: 4px;
 }
 
-.purple-filled-button:hover {
+.purple-filled-button:hover, .purple-filled-rounded-button:hover {
     background: #B588F4;
 }
 
@@ -26,4 +26,14 @@
 
 .purple-linear-button:hover {
     border: 1px solid #B588F4
+}
+
+.purple-filled-rounded-button {
+    background: #8338EC;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 8px 20px;
+    gap: 10px;
 }

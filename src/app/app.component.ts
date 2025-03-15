@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AddedAssignmentsPageComponent } from "./components/pages/addedAssignmentsPage/added-assignments-page/added-assignments-page.component";
 import { HeaderComponent } from "./components/header/header/header.component";
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
