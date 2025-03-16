@@ -7,8 +7,73 @@
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
+    padding: 10px 18px;
+    gap: 8px;
+    display: flex;
 }
 
 .btn-filtering:hover, .btn-filtering.show {
     background-color: transparent;
+    color: #8338EC;
+}
+
+.filtering-of-assignments-container {
+    border: 1px solid #DEE2E6;
+    border-radius: 10px;
+    gap: 45px;
+}
+
+.dropdown-menu {
+    border-top: 0.5px solid #8338EC;
+    border-radius: 10px;
+    padding: 40px 30px 20px;
+    gap: 25px;
+    background: #FFFFFF;
+    width: 688px;
+}
+
+.dropdown-menu .checkbox-container .form-check-label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #212529;
+}
+
+.dropdown-menu .checkbox-container .form-check-input {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 1.5px solid #212529
+}
+
+.dropdown-menu .checkbox-container .form-check-input:checked {
+    background-color: #FFFFFF;
+}
+
+.dropdown-menu .checkbox-container .form-check-input:focus {
+    border-color: #212529;
+    outline: 0;
+    box-shadow: none;
+}
+.dropdown-menu .checkbox-container .form-check-input:checked[type=checkbox] {
+    --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+
+.dropdown-menu .checkbox-container .form-check {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu .checkbox-container {
+    gap: 22px;
+}
+
+.dropdown-menu .btn-choose-cont {
+    padding-top: 25px;
+}
+
+.dropdown-toggle::after {
+    display: none;
 }

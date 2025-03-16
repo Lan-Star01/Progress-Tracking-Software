@@ -1,12 +1,12 @@
 <h3>დავალების გვერდი</h3>
 <section id="filtering-of-assignments">
-    <div class="d-flex">
+    <div class="d-inline-flex filtering-of-assignments-container">
         <div class="dropdown dropdown-department">
             <button class="btn btn-secondary dropdown-toggle btn-filtering" type="button" id="dropdownMenuDepartment" data-bs-toggle="dropdown" aria-expanded="false">
-              დეპარტამენტი
+              დეპარტამენტი <i class="bi bi-chevron-down"></i>
             </button>
             <div class="dropdown-menu dropdown-menu-department" aria-labelledby="dropdownMenuDepartment">
-                <div class="checkbox-container d-flex justify-content-start">
+                <div class="checkbox-container d-grid justify-content-start">
                     <div class="form-check" *ngFor="let department of departments">
                       <input class="form-check-input" 
                         type="checkbox" 
@@ -19,17 +19,17 @@
                       </label>
                     </div>
                 </div>
-                <div>
+                <div class="d-flex justify-content-end btn-choose-cont">
                     <button type="button" class="btn purple-filled-rounded-button">არჩევა</button>
                 </div>
             </div>
         </div>
         <div class="dropdown dropdown-priority">
             <button class="btn btn-secondary dropdown-toggle btn-filtering" type="button" id="dropdownMenuPriority" data-bs-toggle="dropdown" aria-expanded="false">
-              პრიორიტეტი
+              პრიორიტეტი <i class="bi bi-chevron-down"></i>
             </button>
             <div class="dropdown-menu dropdown-menu-priority" aria-labelledby="dropdownMenuPriority">
-                <div class="checkbox-container d-flex justify-content-start">
+                <div class="checkbox-container d-grid justify-content-start">
                     <div class="form-check" *ngFor="let priority of priorities">
                       <input class="form-check-input" 
                         type="checkbox" 
@@ -42,14 +42,14 @@
                       </label>
                     </div>
                 </div>
-                <div>
+                <div class="d-flex justify-content-end btn-choose-cont">
                     <button type="button" class="btn purple-filled-rounded-button">არჩევა</button>
                 </div>
             </div>
         </div>
         <div class="dropdown dropdown-employee">
             <button class="btn btn-secondary dropdown-toggle btn-filtering" type="button" id="dropdownMenuEmployee" data-bs-toggle="dropdown" aria-expanded="false">
-              თანამშრომელი
+              თანამშრომელი <i class="bi bi-chevron-down"></i>
             </button>
             <div class="dropdown-menu dropdown-menu-employee" aria-labelledby="dropdownMenuEmployee">
                 <div class="checkbox-container d-flex justify-content-start">
@@ -65,7 +65,7 @@
                       </label>
                     </div>
                 </div>
-                <div>
+                <div class="d-flex justify-content-end btn-choose-cont">
                     <button type="button" class="btn purple-filled-rounded-button">არჩევა</button>
                 </div>
             </div>
