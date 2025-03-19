@@ -1,0 +1,86 @@
+.form-cont {
+  display: flex;
+  background: #FBF9FFA6;
+  border: 0.3px solid #DDD2FF;
+  border-radius: 4px;
+  width: 100%;
+  height: 958px;
+  padding: 70px 50px;
+}
+.form-group .form-control, .btn-filtering {
+  width: 550px;
+  height: 45px;
+  padding: 14px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  border: 1px solid #DEE2E6;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: start;
+}
+
+.create-assignment-form {
+  gap: 55px;
+  display: grid;
+  width: 100%;
+}
+
+.last-row .form-group .form-control, .last-row .btn-filtering, .last-row .dropdown-menu.show  {
+  width: 259px !important;
+}
+
+.purple-filled-button {
+  height: 45px;
+}
+.btn-filtering {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group textarea {
+  height: auto !important;
+}
+.dropdown .btn.show {
+  border: 1px solid #8338EC;
+  border-radius: 5px 5px 0px 0px !important;
+  border-bottom: white;
+  padding: 12px 14px !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu.show {
+  width: 550px;
+  border: 1px solid #8338EC;
+  border-radius: 0px 0px 5px 5px !important;
+  border-top: white;
+  transform: translate3d(0px, 44px, 0px) !important;
+  padding: 0px !important; 
+}
+
+.dropdown-menu.show .options{
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+
+.btn-add-employee {
+  border: none;
+  background-color: #FFFFFF;
+  color: #8338EC;
+}
+
+.btn-add-employee {
+  background-color: #FFFFFF;
+  border: none;
+}
+
+.icno-and-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

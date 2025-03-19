@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +10,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent {
+   constructor(private router: Router) {
+  }
 
+  navigateToAssignmentCreationPage() {
+    this.router.navigate(['/create-assignment']);
+  }
 }

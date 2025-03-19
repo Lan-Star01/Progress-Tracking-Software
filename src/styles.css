@@ -9,6 +9,11 @@
     gap: 4px;
 }
 
+.purple-filled-button:disabled {
+    background: #B588F4;
+    color: #FFFFFF;
+}
+
 .purple-filled-button:hover, .purple-filled-rounded-button:hover {
     background: #B588F4;
 }
@@ -38,3 +43,4 @@
     gap: 10px;
     width: 155px;
 }
+

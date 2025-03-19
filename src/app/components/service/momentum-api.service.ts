@@ -8,7 +8,7 @@ import * as CryptoJS from 'crypto-js';
 })
 export class MomentumApiService {
 
-  private token ='9e700ca6-5f7c-483e-acae-42577f7144ae'
+  private token ='9e763dbf-1c90-4482-a019-eeacc57e203c'
   private apiUrl = 'https://momentum.redberryinternship.ge/api';
   private hashedToken!: string;
   
@@ -36,6 +36,10 @@ export class MomentumApiService {
     return this.http.get(`${this.apiUrl}/employees`, { headers: this.headers });
   }
 
+  getStatuses(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/statuses`);
+  }
+
 }
 
 // interfaces
@@ -56,4 +60,9 @@ export interface Employees {
   surname: string;
   avatar: string;
   department_id: string;
+}
+
+export interface Statuses {
+  id: number;
+  name: string;
 }

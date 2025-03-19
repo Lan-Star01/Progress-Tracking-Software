@@ -1,0 +1,117 @@
+<h3>შექმენი ახალი დავალება</h3>
+<section>
+    <div class="form-cont">
+        <form [formGroup]="createAssignment" class="create-assignment-form form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label>სათაური*</label>
+                  <input type="text" class="form-control" formControlName="title" />
+                  
+                </div>
+                
+                <div class="form-group col-md-6">
+                  <label>დეპარტამენტი*</label>
+                  <div class="dropdown dropdown-department">
+                    <button class="btn dropdown-toggle btn-filtering" type="button" id="dropdownMenuDepartment" data-bs-toggle="dropdown" aria-expanded="false">
+                     <p> {{ createAssignment.controls['department'].value || '' }}</p>
+                     <span><i class="bi bi-chevron-down"></i></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-department" aria-labelledby="dropdownMenuDepartment">
+                        <div class="d-grid justify-content-start">
+                            <div class="options" *ngFor="let department of departments" (click)="selectDepartment(department.name)">
+                              {{department.name}}
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                
+                <div class="form-group col-md-6">
+                  <label>აღწერა</label>
+                  <textarea class="form-control" formControlName="description" rows="5"></textarea>
+                  
+                </div>
+                
+                <div class="form-group col-md-6">
+                  <div *ngIf="createAssignment.get('department')?.value">
+                    <label>პასუხისმგებელი თანამშრომელი*</label>
+                    <div class="dropdown dropdown-employee">
+                      <button class="btn dropdown-toggle btn-filtering" type="button" id="dropdownMenuEmployee" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ createAssignment.controls['employee'].value || 'აირჩიეთ თანამშრომელი' }}
+                        <span><i class="bi bi-chevron-down"></i></span>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-employee" aria-labelledby="dropdownMenuEmployee">
+                          <div class="d-grid justify-content-start">
+                            <div>
+                              <button type="button" class="btn btn-add-employee option">
+                                <i class="bi bi-plus-circle"></i> დაამატე თანამშრომელი
+                              </button>
+                            </div>
+                              <div class="options" *ngFor="let employee of employees" (click)="selectEmployee(employee.name)">
+                                {{ employee.name }}
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row last-row">
+                <div class="form-group col-md-2">
+                  <label>პრიორიტეტი*</label>
+                  <div class="dropdown dropdown-priority">
+                    <button class="btn dropdown-toggle btn-filtering" type="button" id="dropdownMenuPriority" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div class="icno-and-name">
+                        <img *ngIf="createAssignment.controls['priority'].value?.icon" 
+                        [src]="createAssignment.controls['priority'].value.icon" 
+                        class="priority-icon" />
+                        {{ createAssignment.controls['priority'].value?.name }}
+                      </div>
+                      
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-priority" aria-labelledby="dropdownMenuPriority">
+                        <div class="d-grid justify-content-start">
+                            <div  class="options" *ngFor="let priority of priorities" (click)="selectPriority(priority.name, priority.icon )">
+                              <img [src]="priority.icon" />
+                              {{ priority.name }}
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-4" style="margin-left: 22px;">
+                  <label>სტატუსი*</label>
+                  <div class="dropdown dropdown-status">
+                    <button class="btn dropdown-toggle btn-filtering" type="button" id="dropdownMenuStatus" data-bs-toggle="dropdown" aria-expanded="false">
+                      {{ createAssignment.controls['status'].value || 'დასაწყები' }}
+                      <span><i class="bi bi-chevron-down"></i></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-status" aria-labelledby="dropdownMenuStatus">
+                        <div class="d-grid justify-content-start">
+                            <div  class="options" *ngFor="let status of statuses" (click)="selectStatus(status.name)">
+                              {{ status.name }}
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-group col-md-4 p-0">
+                  <label>დედლაინი</label>
+                  <input class="form-control" type="date" id="birthday" formControlName="deadline">
+                </div>
+              </div>
+              
+              <div class="col-10 d-flex justify-content-end">
+                <button type="submit" [disabled]="createAssignment.invalid" class="btn purple-filled-button">დავალების შექმნა</button>
+              </div>
+              
+        </form>
+
+    </div>
+</section>
+

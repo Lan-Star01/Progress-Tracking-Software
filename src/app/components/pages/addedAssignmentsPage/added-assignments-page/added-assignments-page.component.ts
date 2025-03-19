@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Departments, Employees, MomentumApiService, Priorities } from '../../../service/momentum-api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-added-assignments-page',
@@ -11,7 +12,7 @@ import { Departments, Employees, MomentumApiService, Priorities } from '../../..
 })
 export class AddedAssignmentsPageComponent implements OnInit {
 
-  constructor(private APIServices: MomentumApiService) {
+  constructor(private APIServices: MomentumApiService, private router: Router) {
   }
 
   departments: Departments[] = [];
@@ -47,5 +48,6 @@ export class AddedAssignmentsPageComponent implements OnInit {
       }
     )
   }
+
   
 }
